@@ -17,5 +17,11 @@ Route::get('/', function () {
     $wave = 'Hello';
     $subject = 'World';
 
+
     return view('home', ['wave'=>$wave], ['subject'=>$subject]);
+});
+
+Route::get('/chi-siamo', function () {
+    $fruits = ['apple', 'pear', 'banana', 'pineapple', 'mango'];
+    return view('about', compact('fruits'));
 });
